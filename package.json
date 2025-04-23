@@ -27,8 +27,8 @@
   "homepage": "https://github.com/johnnywang1994/jsPDF-html2canvas#readme",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "html2canvas-pro": "^1.5.6",
-    "jspdf": "^2.5.1"
+    "html2canvas-pro": "^1.5.8",
+    "jspdf": "^3.0.1"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
