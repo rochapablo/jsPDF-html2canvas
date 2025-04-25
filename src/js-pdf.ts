@@ -39,16 +39,22 @@ async function html2PDF(
   // init pdf
   _opts.init.call(_opts, pdfInstance.pdf);
 
+  const delay = async () => await new Promise(r => setTimeout(r, 3000));
+
   // multi pages by nodes
   if ('length' in dom) {
     for (let i = 0; i < dom.length; i++) {
       const canvas = await html2canvas(dom[i], _opts.html2canvas);
+      await delay();
       renderCanvas(canvas, pdfInstance, _opts);
+      await delay();
     }
   } else {
     // single page for one node
     const canvas = await html2canvas(dom, _opts.html2canvas);
+    await delay();
     renderCanvas(canvas, pdfInstance, _opts);
+    await delay();
   }
 
   // check plugins
